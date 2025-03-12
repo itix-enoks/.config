@@ -1,0 +1,42 @@
+theme = "dark"
+
+[editor]
+line-number = "relative"
+undercurl = true
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = false
+character = "|"
+skip-levels = 1
+
+[editor.auto-save]
+after-delay.enable = true
+auto-save.after-delay.timeout = 10_000
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
