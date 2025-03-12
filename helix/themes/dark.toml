@@ -1,3 +1,6 @@
+# Original Author: NNB <nnbnh@protonmail.com>
+# Edited by: Enka <enoks@tutanota.com>
+
 "ui.menu" = { fg = "black", bg = "white" }
 "ui.menu.selected" = { modifiers = ["reversed"] }
 "ui.linenr" = { fg = "gray", bg = "black" }
@@ -10,8 +13,7 @@
 "ui.statusline" = { fg = "black", bg = "white" }
 "ui.statusline.inactive" = { fg = "gray", bg = "white" }
 "ui.cursor" = { fg = "white", modifiers = ["reversed"] }
-"variable" = "red"
-"variable.parameter" = "default"
+"variable" = "default"
 "constant.numeric" = "yellow"
 "constant" = "yellow"
 "attributes" = "yellow"
@@ -49,7 +51,7 @@
 "diff.delta" = "yellow"
 "diff.minus" = "red"
 
-"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic" = { underline = { style = "curl" } }
 "ui.gutter" = { bg = "black" }
 "info" = "blue"
 "hint" = "gray"
