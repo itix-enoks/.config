@@ -1,3 +1,5 @@
 [[language]]
-name = "rust"
-indent = { tab-width = 4, unit = "    " }
+name = "c"
+file-types = ["c", "h"]
+formatter = { command = 'clang-format', args = ["--style", "WebKit"]}
+auto-format = true
