@@ -62,10 +62,9 @@
       (masked-fg-2        "#696969")
 
       (masked-cyan-alt    "#004daa")
-      (masked-magenta-alt "#c617e6")
+      (masked-green-alt   "#11ff11")
 
-      (masked-gold        "#ffd700")
-      (masked-black       "#000000")
+      (masked-black       "#181818")
       (masked-white       "#dddddd")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
@@ -97,27 +96,27 @@
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:inherit font-lock-keyword-face))))
-   `(font-lock-comment-face ((t (:foreground ,masked-magenta))))
+   `(font-lock-comment-face ((t (:foreground ,masked-green-alt))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face ((t (:foreground ,masked-fg))))
-   `(font-lock-keyword-face ((t (:foreground ,masked-yellow))))
+   `(font-lock-keyword-face ((t (:foreground ,masked-white))))
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-yellow))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
    `(font-lock-variable-name-face ((t (:foreground ,masked-fg))))
    `(font-lock-warning-face ((t (:foreground ,masked-red))))
-   `(font-lock-negation-char-face ((t (:foreground ,masked-fg))))
+   `(font-lock-negation-char-face ((t (:foreground ,masked-green))))
 
    ;; general
-   `(cursor ((t (:background ,masked-gold))))
+   `(cursor ((t (:background ,masked-green))))
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg-1))))
    `(minibuffer-prompt ((t (:foreground ,masked-white))))
    `(region ((t (:foreground ,masked-white :background ,masked-cyan-alt))))
-   `(link ((t (:foreground ,masked-magenta-alt :underline t))))
-   `(link-visited ((t (:foreground ,masked-magenta :underline t))))
+   `(link ((t (:foreground ,masked-white :underline t))))
+   `(link-visited ((t (:foreground ,masked-white :underline t))))
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,masked-cyan))))
@@ -155,22 +154,22 @@
    `(powerline-inactive2 ((t (:foreground ,masked-bg :background ,masked-fg-1))))
 
    ;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-2-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-3-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-4-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-5-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-6-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-7-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-8-face ((t (:inherit font-lock-keyword-face))))
-   `(rainbow-delimiters-depth-9-face ((t (:inherit font-lock-keyword-face))))
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,masked-yellow))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,masked-yellow))))
 
    ;; rust
-   `(rust-unsafe ((t (:inherit font-lock-preprocessor-face))))
-   `(rust-question-mark ((t (:inherit font-lock-preprocessor-face))))
-   `(rust-ampersand-face ((t (:inherit font-lock-preprocessor-face))))
-   `(rust-string-interpolation ((t (:inherit font-lock-preprocessor-face))))
-   `(rust-builtin-formatting-macro ((t (:inherit font-lock-preprocessor-face))))
+   `(rust-unsafe ((t (:foreground ,masked-fg))))
+   `(rust-question-mark ((t (:foreground ,masked-fg))))
+   `(rust-ampersand-face ((t (:foreground ,masked-fg))))
+   `(rust-string-interpolation ((t (:foreground ,masked-fg))))
+   `(rust-builtin-formatting-macro ((t (:foreground ,masked-fg))))
 
    ;; whitespace
    `(whitespace-space ((t (:foreground ,masked-bg+1 :background ,masked-bg ))))
