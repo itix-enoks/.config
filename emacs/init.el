@@ -8,7 +8,7 @@
  version-control t
  delete-old-versions t)
 
-(add-to-list 'default-frame-alist '(font . "Fira Mono-10"))
+(add-to-list 'default-frame-alist '(font . "Fira Code-10"))
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (menu-bar-mode -1)
@@ -78,7 +78,7 @@
 (global-set-key (kbd "C-<return>")
                 (lambda () (interactive)
                   (let ((old-column (current-column)))
-                    (move-end-of-line nil) (newline) (previous-line) (move-to-column old-column))))
+                    (move-end-of-line nil) (newline) (insert-char ?\s old-column))))
 
 (use-package drag-stuff
   :ensure t
@@ -112,7 +112,8 @@
  ;; If there is more than one, they won't work right.
  '(cperl-array-face ((t nil)))
  '(cperl-hash-face ((t (:inherit default))))
- '(underline ((t nil))))
+ '(underline ((t nil)))
+ '(variable-pitch ((t (:foundry "outline" :family "Fira Code")))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -128,6 +129,7 @@
      "b00cc2256e10038afabfb9a6052eb8c14d6c642ebacce00531645cb0589d0f81"
      "e223120256455daba01b6c68510b48fac813acab05c314510e47aea377b23634"
      default))
+
  '(package-selected-packages
    '(base16-theme color-theme-modern company drag-stuff highlight-numbers
                   multiple-cursors nord-theme powershell rainbow-mode

@@ -51,7 +51,7 @@
       (masked-bg          "#00382c")
       (masked-bg-1        "#0f1f1a")
 
-      (masked-red         "indian red")
+      (masked-red         "tomato")
       (masked-green       "pale green")
       (masked-brown       "#987d3e")
       (masked-yellow      "#d1b687")
@@ -62,11 +62,11 @@
       (masked-fg-1        "#969696")
       (masked-fg-2        "#696969")
 
-      (masked-green-hi    "green")
+      (masked-green-hi    "lime green")
       (masked-cyan-hi     "dark turquoise")
 
       (masked-black       "#181818")
-      (masked-white       "floral white")
+      (masked-white       "antique white")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
       (bold               (if masked-theme-enable-bold 'bold 'normal)))
