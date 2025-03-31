@@ -61,8 +61,7 @@
       (masked-fg-1        "#969696")
       (masked-fg-2        "#696969")
 
-      (masked-cyan-alt    "#004daa")
-      (masked-green-alt   "#11ff11")
+      (masked-green-hi    "#11ff11")
 
       (masked-black       "#181818")
       (masked-white       "#dddddd")
@@ -95,8 +94,8 @@
    `(dired-ignored ((t (:foreground ,masked-cyan))))
 
    ;; font-lock
-   `(font-lock-builtin-face ((t (:inherit font-lock-keyword-face))))
-   `(font-lock-comment-face ((t (:foreground ,masked-green-alt))))
+   `(font-lock-builtin-face ((t (:foreground ,masked-green))))
+   `(font-lock-comment-face ((t (:foreground ,masked-green-hi))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
@@ -114,7 +113,7 @@
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg-1))))
    `(minibuffer-prompt ((t (:foreground ,masked-white))))
-   `(region ((t (:foreground ,masked-white :background ,masked-cyan-alt))))
+   `(region ((t (:foreground ,masked-white :background ,masked-magenta))))
    `(link ((t (:foreground ,masked-white :underline t))))
    `(link-visited ((t (:foreground ,masked-white :underline t))))
 
@@ -122,9 +121,8 @@
    `(highlight-numbers-number ((t (:foreground ,masked-cyan))))
 
    ;; line-numbers
-   `(line-number ((t (:inherit default :foreground ,masked-bg+1 :background ,masked-bg-1))))
-   `(line-number-current-line ((t (:inherit line-number :foreground ,masked-bg+2 :background ,masked-bg-1
-                                            :weight ,bold))))
+   `(line-number ((t (:inherit default :foreground ,masked-bg+3 :background ,masked-bg))))
+   `(line-number-current-line ((t (:inherit line-number :foreground ,masked-bg+3 :background ,masked-bg :weight ,bold))))
 
    ;; mode-line
    `(mode-line-active ((t (:foreground ,masked-bg :background ,masked-yellow))))
@@ -144,25 +142,6 @@
    `(org-level-5 ((t (:foreground ,masked-green :background ,masked-bg))))
    `(org-level-6 ((t (:foreground ,masked-yellow :background ,masked-bg))))
    `(org-level-7 ((t (:foreground ,masked-bg+3 :background ,masked-bg))))
-
-   ;; powerline
-   `(powerline-active0 ((t (:foreground ,masked-bg  :background ,masked-yellow))))
-   `(powerline-active1 ((t (:foreground ,masked-bg :background ,masked-yellow))))
-   `(powerline-active2 ((t (:foreground ,masked-bg :background ,masked-yellow))))
-   `(powerline-inactive0 ((t (:foreground ,masked-bg  :background ,masked-fg-1))))
-   `(powerline-inactive1 ((t (:foreground ,masked-bg :background ,masked-fg-1))))
-   `(powerline-inactive2 ((t (:foreground ,masked-bg :background ,masked-fg-1))))
-
-   ;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-2-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-3-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-4-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-5-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-6-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-8-face ((t (:foreground ,masked-yellow))))
-   `(rainbow-delimiters-depth-9-face ((t (:foreground ,masked-yellow))))
 
    ;; rust
    `(rust-unsafe ((t (:foreground ,masked-fg))))
