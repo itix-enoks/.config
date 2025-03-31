@@ -62,8 +62,7 @@
       (masked-fg-1        "#969696")
       (masked-fg-2        "#696969")
 
-      (masked-green-hi    "lime green")
-      (masked-cyan-hi     "dark turquoise")
+      (masked-green-hi    "green")
 
       (masked-black       "#181818")
       (masked-white       "antique white")
@@ -108,7 +107,7 @@
    `(font-lock-type-face ((t (:foreground ,masked-green))))
    `(font-lock-variable-name-face ((t (:foreground ,masked-fg))))
    `(font-lock-warning-face ((t (:foreground ,masked-red))))
-   `(font-lock-negation-char-face ((t (:foreground ,masked-green))))
+   `(font-lock-negation-char-face ((t (:foreground ,masked-fg))))
 
    ;; general
    `(cursor ((t (:background ,masked-green))))
@@ -120,7 +119,7 @@
    `(link-visited ((t (:foreground ,masked-white :underline t))))
 
    ;; highlight-numbers
-   `(highlight-numbers-number ((t (:foreground ,masked-cyan-hi))))
+   `(highlight-numbers-number ((t (:foreground ,masked-green))))
 
    ;; line-numbers
    `(line-number ((t (:inherit default :foreground ,masked-bg+3 :background ,masked-bg))))
