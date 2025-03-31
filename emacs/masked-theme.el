@@ -51,22 +51,22 @@
       (masked-bg          "#00382c")
       (masked-bg-1        "#0f1f1a")
 
-      (masked-red         "#c77575")
-      (masked-green       "#87f09d")
+      (masked-red         "indian red")
+      (masked-green       "pale green")
       (masked-brown       "#987d3e")
       (masked-yellow      "#d1b687")
       (masked-magenta     "#897399")
-      (masked-cyan        "LightSeaGreen" )
+      (masked-cyan        "light sea green" )
 
       (masked-fg          "#c7b176")
       (masked-fg-1        "#969696")
       (masked-fg-2        "#696969")
 
-      (masked-green-hi    "#11ff11")
-      (masked-cyan-hi     "DarkTurquoise")
+      (masked-green-hi    "green")
+      (masked-cyan-hi     "dark turquoise")
 
       (masked-black       "#181818")
-      (masked-white       "#dddddd")
+      (masked-white       "floral white")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
       (bold               (if masked-theme-enable-bold 'bold 'normal)))
