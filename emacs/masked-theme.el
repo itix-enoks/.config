@@ -101,7 +101,7 @@
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face ((t (:foreground ,masked-fg))))
-   `(font-lock-keyword-face ((t (:foreground ,masked-white))))
+   `(font-lock-keyword-face ((t (:foreground ,masked-white :weight ,bold))))
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-cyan))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
@@ -145,11 +145,14 @@
    `(org-level-7 ((t (:foreground ,masked-bg+3 :background ,masked-bg))))
 
    ;; rust
-   `(rust-unsafe ((t (:foreground ,masked-fg))))
-   `(rust-question-mark ((t (:foreground ,masked-fg))))
-   `(rust-ampersand-face ((t (:foreground ,masked-fg))))
-   `(rust-string-interpolation ((t (:foreground ,masked-fg))))
-   `(rust-builtin-formatting-macro ((t (:foreground ,masked-fg))))
+   `(rust-unsafe ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-question-mark ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-ampersand-face ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-string-interpolation ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-builtin-formatting-macro ((t (:foreground ,masked-fg :slant ,italic))))
+
+   ;; vhdl
+   `(vhdl-font-lock-function-face ((t (:foreground ,masked-red))))
 
    ;; whitespace
    `(whitespace-space ((t (:foreground ,masked-bg+1 :background ,masked-bg ))))

@@ -8,7 +8,7 @@
  version-control t
  delete-old-versions t)
 
-(add-to-list 'default-frame-alist '(font . "Fira Code-10"))
+(add-to-list 'default-frame-alist '(font . "Roboto Mono-10"))
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (menu-bar-mode -1)
@@ -68,9 +68,11 @@
 (global-set-key (kbd "C-c s") 'shell-command)
 (global-set-key (kbd "C-c i")
                 (lambda () (interactive)
-                  (eldoc-minibuffer-message "Indenting buffer...")
+                  (eldoc-minibuffer-message "Formatting buffer...")
+                  (whitespace-cleanup)
+                  (untabify 0 (point-max))
                   (indent-region 0 (point-max))
-                  (eldoc-minibuffer-message "Indenting buffer...done")))
+                  (eldoc-minibuffer-message "Formatting buffer...done")))
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c l")
                 (lambda () (interactive)
@@ -113,7 +115,7 @@
  '(cperl-array-face ((t nil)))
  '(cperl-hash-face ((t (:inherit default))))
  '(underline ((t nil)))
- '(variable-pitch ((t (:foundry "outline" :family "Fira Code")))))
+ '(variable-pitch ((t (:foundry "outline" :family "Roboto Mono")))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -131,6 +133,6 @@
      default))
 
  '(package-selected-packages
-   '(base16-theme color-theme-modern company drag-stuff highlight-numbers
-                  multiple-cursors nord-theme powershell rainbow-mode
-                  rust-mode)))
+   '(base16-theme color-theme-modern company drag-stuff go-mode
+                  highlight-numbers multiple-cursors nord-theme
+                  powershell rainbow-mode rust-mode)))
