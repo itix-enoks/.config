@@ -40,8 +40,8 @@
 
  whitespace-style
  '(face
-   ;; tabs tab-mark
-   ;; spaces space-mark
+   tabs tab-mark
+   spaces space-mark
    ;; newline newline-mark
    space-before-tab
    space-after-tab

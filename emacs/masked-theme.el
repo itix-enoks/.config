@@ -58,11 +58,11 @@
       (masked-magenta     "#897399")
       (masked-cyan        "light sea green" )
 
-      (masked-fg          "#c7b176")
+      (masked-fg          "moccasin")
       (masked-fg-1        "#969696")
       (masked-fg-2        "#696969")
 
-      (masked-green-hi    "green")
+      (masked-green-hi    "salmon")
 
       (masked-black       "#181818")
       (masked-white       "antique white")
