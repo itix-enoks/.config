@@ -8,7 +8,7 @@
  version-control t
  delete-old-versions t)
 
-(add-to-list 'default-frame-alist '(font . "Roboto Mono-10"))
+(add-to-list 'default-frame-alist '(font . "JuliaMono-12"))
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (menu-bar-mode -1)
@@ -31,6 +31,11 @@
 
 (setq-default
  dired-listing-switches "-aBhl  --group-directories-first"
+
+ mac-command-modifier 'meta
+
+ frame-resize-pixelwise t
+ window-resize-pixelwise t
 
  c-basic-offset 4
  cperl-indent-level 4
@@ -131,8 +136,7 @@
      "b00cc2256e10038afabfb9a6052eb8c14d6c642ebacce00531645cb0589d0f81"
      "e223120256455daba01b6c68510b48fac813acab05c314510e47aea377b23634"
      default))
-
  '(package-selected-packages
    '(base16-theme color-theme-modern company drag-stuff go-mode
                   highlight-numbers multiple-cursors nord-theme
-                  powershell rainbow-mode rust-mode)))
+                  powershell rainbow-mode rust-mode typescript-mode)))

@@ -63,6 +63,7 @@
       (masked-fg-2        "#696969")
 
       (masked-green-hi    "salmon")
+      (masked-yellow-hi   "gold")
 
       (masked-black       "#181818")
       (masked-white       "antique white")
@@ -96,12 +97,12 @@
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:foreground ,masked-green))))
-   `(font-lock-comment-face ((t (:foreground ,masked-green-hi))))
+   `(font-lock-comment-face ((t (:foreground ,masked-green-hi :slant ,italic))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face ((t (:foreground ,masked-fg))))
-   `(font-lock-keyword-face ((t (:foreground ,masked-white :weight ,bold))))
+   `(font-lock-keyword-face ((t (:foreground ,masked-yellow-hi :weight ,bold))))
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-cyan))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
