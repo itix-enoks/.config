@@ -56,16 +56,13 @@
       (masked-brown       "#987d3e")
       (masked-yellow      "#d1b687")
       (masked-magenta     "#897399")
-      (masked-cyan        "lightblue" )
+      (masked-cyan        "light blue")
 
       (masked-fg          "moccasin")
       (masked-fg-1        "#969696")
-      (masked-fg-2        "#696969")
 
-      (masked-green-hi    "salmon")
       (masked-yellow-hi   "gold")
 
-      (masked-black       "#181818")
       (masked-white       "antique white")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
@@ -73,16 +70,6 @@
 
   (custom-theme-set-faces
    'masked
-
-   ;; ansi-term / vterm
-   `(term-color-black ((t (:foreground ,masked-black :background ,masked-black))))
-   `(term-color-red ((t (:foreground ,masked-red :background ,masked-red))))
-   `(term-color-green ((t (:foreground ,masked-green :background ,masked-green))))
-   `(term-color-blue ((t (:foreground ,masked-yellow :background ,masked-yellow))))
-   `(term-color-yellow ((t (:foreground ,masked-brown :background ,masked-brown))))
-   `(term-color-magenta ((t (:foreground ,masked-magenta :background ,masked-magenta))))
-   `(term-color-cyan ((t (:foreground ,masked-yellow :background ,masked-yellow))))
-   `(term-color-white ((t (:foreground ,masked-fg :background ,masked-fg))))
 
    ;; compilation
    `(compilation-info ((t (:foreground ,masked-green))))
@@ -97,7 +84,7 @@
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:foreground ,masked-green))))
-   `(font-lock-comment-face ((t (:foreground ,masked-green-hi :slant ,italic))))
+   `(font-lock-comment-face ((t (:foreground ,masked-bg+3 :slant ,italic))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
@@ -130,20 +117,6 @@
    `(mode-line-active ((t (:foreground ,masked-bg :background ,masked-brown))))
    `(mode-line-inactive ((t (:foreground ,masked-bg :background ,masked-fg-1))))
    `(mode-line-buffer-id ((t (:weight ,bold))))
-
-   ;; org
-   `(org-date ((t (:foreground ,masked-yellow :background ,masked-bg))))
-   `(org-hide ((t (:foreground ,masked-fg-1 :background ,masked-bg))))
-   `(org-todo ((t (:foreground ,masked-red :background ,masked-bg))))
-   `(org-done ((t (:foreground ,masked-green :background ,masked-bg))))
-   `(org-headline-done ((t (:inherit org-done))))
-   `(org-level-1 ((t (:foreground ,masked-red :background ,masked-bg))))
-   `(org-level-2 ((t (:foreground ,masked-magenta :background ,masked-bg))))
-   `(org-level-3 ((t (:foreground ,masked-yellow :background ,masked-bg))))
-   `(org-level-4 ((t (:foreground ,masked-yellow :background ,masked-bg))))
-   `(org-level-5 ((t (:foreground ,masked-green :background ,masked-bg))))
-   `(org-level-6 ((t (:foreground ,masked-brown :background ,masked-bg))))
-   `(org-level-7 ((t (:foreground ,masked-bg+3 :background ,masked-bg))))
 
    ;; rust
    `(rust-unsafe ((t (:foreground ,masked-fg :slant ,italic))))

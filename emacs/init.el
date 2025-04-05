@@ -121,22 +121,11 @@
  '(cperl-hash-face ((t (:inherit default))))
  '(underline ((t nil)))
  '(variable-pitch ((t (:foundry "outline" :family "Roboto Mono")))))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("664111db1521fe3351061dc87aea95fa98b3f244f4b830fbc048d39c3a8bc125"
-     "8ef15701c0f2453d232d60bfa0b81074f832b884c2e149ec2ae4c1a89c374b86"
-     "13bd95b605d4415176da8feb6e58e077017f3d41489d2cb1aaae4db1584727ed"
-     "acbcabc1a02827b86775a0abc440223fb58e9d98568ab6f70dfe262718762de9"
-     "87113683fa3d4b2622bf6c976f4729cb4ef4a06af94bede814bed1b219c75bfa"
-     "b00cc2256e10038afabfb9a6052eb8c14d6c642ebacce00531645cb0589d0f81"
-     "e223120256455daba01b6c68510b48fac813acab05c314510e47aea377b23634"
-     default))
- '(package-selected-packages
-   '(base16-theme color-theme-modern company drag-stuff go-mode
-                  highlight-numbers multiple-cursors nord-theme
-                  powershell rainbow-mode rust-mode typescript-mode)))
+   '("e5db25f43c0078e14f813981f4edf1770713b98c2151a968f465f8847322b60c"
+     default)))
