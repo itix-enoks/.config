@@ -56,7 +56,7 @@
       (masked-brown       "#987d3e")
       (masked-yellow      "#d1b687")
       (masked-magenta     "#897399")
-      (masked-cyan        "light sea green" )
+      (masked-cyan        "lightblue" )
 
       (masked-fg          "moccasin")
       (masked-fg-1        "#969696")
