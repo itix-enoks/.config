@@ -48,8 +48,7 @@
 (let ((masked-bg+3        "#4a8a7a")
       (masked-bg+2        "#3a6d60")
       (masked-bg+1        "#2a5046")
-      (masked-bg          "#00382c")
-      (masked-bg-1        "#0f1f1a")
+      (masked-bg          "#0f1f1a")
 
       (masked-red         "tomato")
       (masked-green       "pale green")
@@ -100,7 +99,7 @@
    ;; general
    `(cursor ((t (:background ,masked-green))))
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
-   `(fringe ((t (:foreground ,masked-fg :background ,masked-bg-1))))
+   `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+1))))
    `(minibuffer-prompt ((t (:foreground ,masked-white))))
    `(region ((t (:foreground ,masked-white :background ,masked-magenta))))
    `(link ((t (:foreground ,masked-white :underline t))))
@@ -108,6 +107,9 @@
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,masked-green))))
+
+   ;; highlight-line
+   `(hl-line ((t (:background ,masked-bg+1))))
 
    ;; line-numbers
    `(line-number ((t (:inherit default :foreground ,masked-bg+3 :background ,masked-bg))))
@@ -119,8 +121,8 @@
    `(mode-line-buffer-id ((t (:weight ,bold))))
 
    ;; rust
-   `(rust-unsafe ((t (:foreground ,masked-fg :slant ,italic))))
-   `(rust-question-mark ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-unsafe ((t (:foreground ,masked-red :weight ,bold))))
+   `(rust-question-mark ((t (:foreground ,masked-fg :weight ,bold))))
    `(rust-ampersand-face ((t (:foreground ,masked-fg :slant ,italic))))
    `(rust-string-interpolation ((t (:foreground ,masked-fg :slant ,italic))))
    `(rust-builtin-formatting-macro ((t (:foreground ,masked-fg :slant ,italic))))

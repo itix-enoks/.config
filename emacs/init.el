@@ -8,22 +8,18 @@
  version-control t
  delete-old-versions t)
 
-(add-to-list 'default-frame-alist '(font . "JuliaMono-10"))
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(let ((font-name "Dejavu Sans Mono"))
+  (set-frame-font (concat font-name "-" (if (string= system-name "DESKTOP-X3N") "10" "14"))))
 
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
-(fringe-mode '(10 . 10))
+(fringe-mode '(0 . 10))
 
 (icomplete-mode 1)
 
 (load-theme 'masked t)
-(use-package nord-theme
-  :ensure t
-  :disabled
-  :config (load-theme 'nord t))
 
 (use-package highlight-numbers
   :ensure t
@@ -61,7 +57,7 @@
             (let ((display-line-numbers-type 'relative))
               (display-line-numbers-mode -1))
             (electric-pair-local-mode -1)
-            (global-hl-line-mode -1)
+            (global-hl-line-mode 1)
             (whitespace-mode)))
 
 (defalias 'perl-mode 'cperl-mode)
