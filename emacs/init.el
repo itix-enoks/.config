@@ -8,7 +8,7 @@
  version-control t
  delete-old-versions t)
 
-(add-to-list 'default-frame-alist '(font . "JuliaMono-12"))
+(add-to-list 'default-frame-alist '(font . "JuliaMono-10"))
 ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (menu-bar-mode -1)
