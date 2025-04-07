@@ -45,25 +45,20 @@
   :type 'boolean)
 
 ;; colors with `+c' are lighter; and with `-c' darker
-(let ((masked-bg+3        "#4a8a7a")
-      (masked-bg+2        "#3a6d60")
-      (masked-bg+1        "#2a5046")
-      (masked-bg          "#0f1f1a")
+(let ((masked-fg          "honeydew")
 
-      (masked-red         "tomato")
+      (masked-bg          "#0f1f1a")
+      (masked-bg+1        "#2a5046")
+      (masked-bg+2        "#3a6d60")
+      (masked-bg+3        "#4a8a7a")
+
+      (masked-emerald      "#00cd8c")
       (masked-green       "pale green")
+      (masked-cyan        "light blue")
+      (masked-red         "tomato")
       (masked-brown       "#987d3e")
       (masked-yellow      "#d1b687")
       (masked-magenta     "#897399")
-      (masked-cyan        "light blue")
-      (masked-emerald      "#00cd8c")
-
-      (masked-fg          "moccasin")
-      (masked-fg-1        "#969696")
-
-      (masked-yellow-hi   "gold")
-
-      (masked-white       "antique white")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
       (bold               (if masked-theme-enable-bold 'bold 'normal)))
@@ -101,10 +96,10 @@
    `(cursor ((t (:background ,masked-green))))
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+2))))
-   `(minibuffer-prompt ((t (:foreground ,masked-white))))
-   `(region ((t (:foreground ,masked-white :background ,masked-magenta))))
-   `(link ((t (:foreground ,masked-white :underline t))))
-   `(link-visited ((t (:foreground ,masked-white :underline t))))
+   `(minibuffer-prompt ((t (:foreground ,masked-fg :weight ,bold))))
+   `(region ((t (:foreground ,masked-fg :weight ,bold :background ,masked-magenta))))
+   `(link ((t (:foreground ,masked-fg :weight ,bold :underline t))))
+   `(link-visited ((t (:foreground ,masked-fg :weight ,bold :underline t))))
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,masked-green))))
