@@ -56,6 +56,7 @@
       (masked-yellow      "#d1b687")
       (masked-magenta     "#897399")
       (masked-cyan        "light blue")
+      (masked-emerald      "#00cd8c")
 
       (masked-fg          "moccasin")
       (masked-fg-1        "#969696")
@@ -88,7 +89,7 @@
    `(font-lock-constant-face ((t (:foreground ,masked-fg))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face ((t (:foreground ,masked-fg))))
-   `(font-lock-keyword-face ((t (:foreground ,masked-yellow-hi :weight ,bold))))
+   `(font-lock-keyword-face ((t (:foreground ,masked-emerald))))
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-cyan))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
@@ -99,7 +100,7 @@
    ;; general
    `(cursor ((t (:background ,masked-green))))
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
-   `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+1))))
+   `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+2))))
    `(minibuffer-prompt ((t (:foreground ,masked-white))))
    `(region ((t (:foreground ,masked-white :background ,masked-magenta))))
    `(link ((t (:foreground ,masked-white :underline t))))
@@ -116,8 +117,8 @@
    `(line-number-current-line ((t (:inherit line-number :foreground ,masked-bg+3 :background ,masked-bg :weight ,bold))))
 
    ;; mode-line
-   `(mode-line-active ((t (:foreground ,masked-bg :background ,masked-brown))))
-   `(mode-line-inactive ((t (:foreground ,masked-bg :background ,masked-fg-1))))
+   `(mode-line-active ((t (:foreground ,masked-bg :background ,masked-emerald))))
+   `(mode-line-inactive ((t (:foreground ,masked-bg :background ,masked-bg+2))))
    `(mode-line-buffer-id ((t (:weight ,bold))))
 
    ;; rust

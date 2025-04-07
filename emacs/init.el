@@ -15,7 +15,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
-(fringe-mode '(0 . 10))
+(fringe-mode '(5 . 5))
 
 (icomplete-mode 1)
 
