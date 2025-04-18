@@ -45,20 +45,19 @@
   :type 'boolean)
 
 ;; colors with `+c' are lighter; and with `-c' darker
-(let ((masked-fg          "honeydew")
+(let ((masked-fg           "honeydew")
 
-      (masked-bg          "#0f1f1a")
-      (masked-bg+1        "#2a5046")
-      (masked-bg+2        "#3a6d60")
-      (masked-bg+3        "#4a8a7a")
+      (masked-bg           "#0f1f1a")
+      (masked-bg+1         "#2a5046")
+      (masked-bg+2         "#3a6d60")
+      (masked-bg+3         "#4a8a7a")
 
       (masked-emerald      "#00cd8c")
-      (masked-green       "pale green")
-      (masked-cyan        "light blue")
-      (masked-red         "tomato")
-      (masked-brown       "#987d3e")
-      (masked-yellow      "#d1b687")
-      (masked-magenta     "#897399")
+      (masked-green        "pale green")
+      (masked-cyan         "light blue")
+      (masked-red          "tomato")
+      (masked-blue         "#0059d1")
+      (masked-yellow       "pale goldenrod")
 
       (italic             (if masked-theme-enable-italic 'italic 'normal))
       (bold               (if masked-theme-enable-bold 'bold 'normal)))
@@ -68,23 +67,23 @@
 
    ;; compilation
    `(compilation-info ((t (:foreground ,masked-green))))
-   `(compilation-warning ((t (:foreground ,masked-brown))))
+   `(compilation-warning ((t (:foreground ,masked-yellow))))
    `(compilation-error ((t (:foreground ,masked-red))))
    `(compilation-mode-line-fail ((t (:foreground ,masked-red :weight ,bold))))
    `(compilation-mode-line-exit ((t (:foreground ,masked-green :weight ,bold))))
 
    ;; dired
-   `(dired-directory ((t (:foreground ,masked-yellow :weight ,bold))))
-   `(dired-ignored ((t (:foreground ,masked-yellow))))
+   `(dired-directory ((t (:foreground ,masked-green))))
+   `(dired-ignored ((t (:foreground ,masked-green))))
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:foreground ,masked-green))))
    `(font-lock-comment-face ((t (:foreground ,masked-bg+3 :slant ,italic))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
-   `(font-lock-constant-face ((t (:foreground ,masked-fg))))
+   `(font-lock-constant-face ((t (:foreground ,masked-yellow))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
-   `(font-lock-function-name-face ((t (:foreground ,masked-fg))))
-   `(font-lock-keyword-face ((t (:foreground ,masked-emerald))))
+   `(font-lock-function-name-face ((t (:foreground ,masked-green))))
+   `(font-lock-keyword-face ((t (:foreground ,masked-emerald :weight ,bold))))
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-cyan))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
@@ -97,9 +96,10 @@
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+2))))
    `(minibuffer-prompt ((t (:foreground ,masked-fg :weight ,bold))))
-   `(region ((t (:foreground ,masked-fg :weight ,bold :background ,masked-magenta))))
+   `(region ((t (:foreground ,masked-fg :background ,masked-blue))))
    `(link ((t (:foreground ,masked-fg :weight ,bold :underline t))))
    `(link-visited ((t (:foreground ,masked-fg :weight ,bold :underline t))))
+   `(show-paren-match ((t (:background ,masked-blue))))
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,masked-green))))
@@ -117,14 +117,14 @@
    `(mode-line-buffer-id ((t (:weight ,bold))))
 
    ;; rust
-   `(rust-unsafe ((t (:foreground ,masked-red :weight ,bold))))
-   `(rust-question-mark ((t (:foreground ,masked-fg :weight ,bold))))
-   `(rust-ampersand-face ((t (:foreground ,masked-fg :slant ,italic))))
-   `(rust-string-interpolation ((t (:foreground ,masked-fg :slant ,italic))))
-   `(rust-builtin-formatting-macro ((t (:foreground ,masked-fg :slant ,italic))))
+   `(rust-unsafe ((t (:foreground ,masked-yellow :weight ,bold))))
+   `(rust-question-mark ((t (:foreground ,masked-yellow :weight ,bold))))
+   `(rust-ampersand-face ((t (:foreground ,masked-yellow))))
+   `(rust-string-interpolation ((t (:foreground ,masked-yellow))))
+   `(rust-builtin-formatting-macro ((t (:foreground ,masked-yellow))))
 
    ;; vhdl
-   `(vhdl-font-lock-function-face ((t (:foreground ,masked-red))))
+   `(vhdl-font-lock-function-face ((t (:foreground ,masked-yellow))))
 
    ;; whitespace
    `(whitespace-space ((t (:foreground ,masked-bg+1 :background ,masked-bg ))))
