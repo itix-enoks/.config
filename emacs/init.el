@@ -61,8 +61,7 @@
               (display-line-numbers-mode -1))
             (electric-pair-local-mode -1)
             (global-hl-line-mode 1)
-            (whitespace-mode 1)
-            (visual-line-mode 1)))
+            (whitespace-mode 1)))
 
 (defalias 'perl-mode 'cperl-mode)
 (add-hook 'cperl-mode-hook (lambda ()
