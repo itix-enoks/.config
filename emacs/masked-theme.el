@@ -77,8 +77,8 @@
    `(dired-ignored ((t (:foreground ,masked-green))))
 
    ;; font-lock
-   `(font-lock-builtin-face ((t (:foreground ,masked-green))))
-   `(font-lock-comment-face ((t (:foreground ,masked-bg+3 :slant ,italic))))
+   `(font-lock-builtin-face ((t (:foreground ,masked-emerald))))
+   `(font-lock-comment-face ((t (:foreground ,masked-bg+3))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:foreground ,masked-yellow))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
@@ -87,7 +87,7 @@
    `(font-lock-preprocessor-face ((t (:foreground ,masked-red))))
    `(font-lock-string-face ((t (:foreground ,masked-cyan))))
    `(font-lock-type-face ((t (:foreground ,masked-green))))
-   `(font-lock-variable-name-face ((t (:foreground ,masked-fg))))
+   `(font-lock-variable-name-face ((t (:foreground ,masked-yellow))))
    `(font-lock-warning-face ((t (:foreground ,masked-red))))
    `(font-lock-negation-char-face ((t (:foreground ,masked-fg))))
 
@@ -96,7 +96,7 @@
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg+2))))
    `(minibuffer-prompt ((t (:foreground ,masked-fg :weight ,bold))))
-   `(region ((t (:foreground ,masked-fg :background ,masked-blue))))
+   `(region ((t (:background ,masked-blue))))
    `(link ((t (:foreground ,masked-fg :weight ,bold :underline t))))
    `(link-visited ((t (:foreground ,masked-fg :weight ,bold :underline t))))
    `(show-paren-match ((t (:background ,masked-blue))))
@@ -117,11 +117,11 @@
    `(mode-line-buffer-id ((t (:weight ,bold))))
 
    ;; rust
-   `(rust-unsafe ((t (:foreground ,masked-yellow :weight ,bold))))
-   `(rust-question-mark ((t (:foreground ,masked-yellow :weight ,bold))))
-   `(rust-ampersand-face ((t (:foreground ,masked-yellow))))
-   `(rust-string-interpolation ((t (:foreground ,masked-yellow))))
-   `(rust-builtin-formatting-macro ((t (:foreground ,masked-yellow))))
+   `(rust-unsafe ((t (:foreground ,masked-red))))
+   `(rust-question-mark ((t (:inherit font-lock-keyword-face))))
+   `(rust-ampersand-face ((t (:foreground ,masked-emerald))))
+   `(rust-string-interpolation ((t (:inherit font-lock-string-face :slant ,italic))))
+   `(rust-builtin-formatting-macro ((t (:foreground ,masked-emerald))))
 
    ;; vhdl
    `(vhdl-font-lock-function-face ((t (:foreground ,masked-yellow))))
