@@ -8,7 +8,7 @@
  version-control t
  delete-old-versions t)
 
-(let ((font-name (cond ((string= system-name "DESKTOP-X3N") "Hack-10")
+(let ((font-name (cond ((string= system-name "DESKTOP-X3N") "Consolas:pixelsize=16")
                        ((string= system-name "Muhammeds-Air.home") "Menlo-12"))))
   (set-frame-font font-name))
 
@@ -21,8 +21,6 @@
 (fringe-mode '(0 . 0))
 
 (icomplete-mode 1)
-
-;;(load-theme 'masked t)
 
 (use-package highlight-numbers
   :ensure t
@@ -60,7 +58,7 @@
             (let ((display-line-numbers-type 'relative))
               (display-line-numbers-mode -1))
             (electric-pair-local-mode -1)
-            (global-hl-line-mode 1)
+            (global-hl-line-mode -1)
             (whitespace-mode 1)))
 
 (defalias 'perl-mode 'cperl-mode)
@@ -81,7 +79,7 @@
 (global-set-key (kbd "C-c l")
                 (lambda () (interactive)
                   (load-file "~/.emacs.d/init.el")))
-(global-set-key (kbd "<S-return>") (kbd "C-e C-m"))
+(global-set-key (kbd "<C-return>") (kbd "C-e C-m"))
 
 (use-package drag-stuff
   :ensure t
@@ -107,3 +105,20 @@
    company-idle-delay 0.0
    company-minimum-prefix-length 2)
   :hook ((prog-mode . company-mode)))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(base16-theme color-theme-modern company drag-stuff go-mode
+                  gruber-darker-theme highlight-numbers markdown-mode
+                  multiple-cursors powershell rainbow-mode rust-mode)))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
