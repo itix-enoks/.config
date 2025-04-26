@@ -8,11 +8,13 @@
  version-control t
  delete-old-versions t)
 
+(setq disabled-command-function nil)
+
 (let ((font-name (cond ((string= system-name "DESKTOP-X3N") "Consolas:pixelsize=16")
                        ((string= system-name "Muhammeds-Air.home") "Menlo-12"))))
   (set-frame-font font-name))
 
-(load-theme 'masked t)
+(load-theme 'emerald t)
 
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -42,8 +44,8 @@
 
  whitespace-style
  '(face
-   tabs tab-mark
-   spaces space-mark
+   ;; tabs tab-mark
+   ;; spaces space-mark
    ;; newline newline-mark
    space-before-tab
    space-after-tab
@@ -80,6 +82,7 @@
                 (lambda () (interactive)
                   (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "<C-return>") (kbd "C-e C-m"))
+(global-set-key (kbd "C-c y") (kbd "C-e C-j C-y"))
 
 (use-package drag-stuff
   :ensure t
