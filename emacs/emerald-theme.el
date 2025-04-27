@@ -45,9 +45,10 @@
   :type 'boolean)
 
 ;; colors with `+c' are lighter; and with `-c' darker
-(let ((emerald-fg-1         "dark khaki")
-      (emerald-fg           "khaki")
-      (emerald-fg+1         "pale goldenrod")
+(let (
+      (emerald-fg           "dark khaki")
+      (emerald-fg+1         "khaki")
+      (emerald-fg+2         "pale goldenrod")
 
       (emerald-bg           "#0f1f1a")
       (emerald-bg+1         "#2a5046")
@@ -79,11 +80,11 @@
    `(font-lock-constant-face ((t (:foreground ,emerald-green))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face ((t (:foreground ,emerald-green))))
-   `(font-lock-keyword-face ((t (:foreground "white"))))
-   `(font-lock-preprocessor-face ((t (:foreground ,emerald-fg+1))))
+   `(font-lock-keyword-face ((t (:foreground ,emerald-emerald))))
+   `(font-lock-preprocessor-face ((t (:foreground ,emerald-fg+2))))
    `(font-lock-string-face ((t (:foreground ,emerald-cyan))))
    `(font-lock-type-face ((t (:foreground ,emerald-green))))
-   `(font-lock-variable-name-face ((t (:foreground ,emerald-green))))
+   `(font-lock-variable-name-face ((t (:foreground ,emerald-fg))))
    `(font-lock-warning-face ((t (:foreground ,emerald-red :weight ,bold))))
    `(font-lock-negation-char-face ((t (:foreground ,emerald-fg))))
 
@@ -104,7 +105,7 @@
    `(line-number-current-line ((t (:inherit line-number :foreground ,emerald-bg+3 :background ,emerald-bg :weight ,bold))))
 
    ;; mode-line
-   `(mode-line-active ((t (:foreground ,emerald-bg :background ,emerald-fg-1))))
+   `(mode-line-active ((t (:foreground ,emerald-bg :background ,emerald-fg+1))))
    `(mode-line-inactive ((t (:foreground ,emerald-bg :background ,emerald-bg+2))))
    `(mode-line-buffer-id ((t (:weight ,bold))))
 
