@@ -8,13 +8,17 @@
  version-control t
  delete-old-versions t)
 
-(setq disabled-command-function nil)
+(setq disabled-command-function nil
+      inhibit-splash-screen t)
 
 (let ((font-name (cond ((string= system-name "DESKTOP-X3N") "Consolas:pixelsize=16")
                        ((string= system-name "Muhammeds-Air.home") "Menlo-12"))))
   (set-frame-font font-name))
 
 (load-theme 'emerald t)
+
+(set-face-italic 'default nil)
+(set-face-bold 'default nil)
 
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -99,6 +103,7 @@
 
 (use-package company
   :ensure t
+  :disabled t
   :config
   (setq
    company-backends '((company-capf
@@ -115,7 +120,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(base16-theme color-theme-modern company drag-stuff go-mode
+   '(base16-theme color-theme-modern company drag-stuff ef-themes go-mode
                   gruber-darker-theme highlight-numbers markdown-mode
                   multiple-cursors powershell rainbow-mode rust-mode)))
 
