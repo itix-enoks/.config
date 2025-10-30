@@ -8,18 +8,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(setq
- backup-directory-alist '(("." . "~/.emacs.d.bak"))
- backup-by-copying t
- version-control t
- delete-old-versions t)
-
 (setq disabled-command-function nil
       inhibit-splash-screen t)
 
 (setq
- dired-listing-switches "-aBhl  --group-directories-first"
-
  mac-command-modifier 'meta
 
  frame-resize-pixelwise t
@@ -53,7 +45,8 @@
 (global-set-key (kbd "C-c c") 'compile)
 (global-set-key (kbd "C-c b") 'eval-buffer)
 (global-set-key (kbd "C-c s") 'shell-command)
-(global-set-key (kbd "C-c i")
+(global-set-key (kbd "C-c i") 'indent-region)
+(global-set-key (kbd "C-c I")
                 (lambda () (interactive)
                   (eldoc-minibuffer-message "Formatting buffer...")
                   (whitespace-cleanup)
@@ -64,7 +57,17 @@
 (global-set-key (kbd "C-c l")
                 (lambda () (interactive)
                   (load-file "~/.emacs.d/init.el")))
-(global-set-key (kbd "<C-return>") (kbd "C-e C-m"))
+(global-set-key (kbd "C-c f") 'toggle-frame-fullscreen)
+(global-set-key (kbd "C-c y")
+                (lambda () (interactive)
+                  (let ((previous-column (current-column)))
+                    (beginning-of-line)
+                    (push-mark)
+                    (end-of-line)
+                    (kill-ring-save nil nil t)
+                    (newline)
+                    (yank)
+                    (move-to-column previous-column))))
 
 (add-hook 'prog-mode-hook
           (lambda ()
@@ -105,5 +108,11 @@
                        company-keywords
                        company-files))
    company-idle-delay 0.0
-   company-minimum-prefix-length 2)
+   company-minimum-prefix-length 3)
   :hook ((prog-mode . company-mode)))
+
+(use-package magit
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
