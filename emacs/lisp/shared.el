@@ -58,7 +58,7 @@
                 (lambda () (interactive)
                   (load-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-c f") 'toggle-frame-fullscreen)
-(global-set-key (kbd "C-c y")
+(global-set-key (kbd "C-<return>")
                 (lambda () (interactive)
                   (let ((previous-column (current-column)))
                     (beginning-of-line)
